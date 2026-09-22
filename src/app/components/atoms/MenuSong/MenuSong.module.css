@@ -1,0 +1,115 @@
+.item {
+  position: relative;
+  width: 100%;
+  min-height: 36px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--spacing-xs6) var(--spacing-xl24);
+  text-align: left;
+}
+
+.defaultContent {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs6);
+  min-width: 0;
+}
+
+.name,
+.year {
+  position: relative;
+  z-index: 1;
+}
+
+.year {
+  color: var(--text-primary);
+}
+
+.marquee {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--background-inverse);
+  color: var(--text-inverse);
+  pointer-events: none;
+  transform: translateY(101%);
+  transition: transform 240ms ease;
+}
+
+.item:hover .marquee,
+.item:focus-visible .marquee {
+  transform: translateY(0);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: nav-song-marquee 15s linear infinite;
+  animation-play-state: paused;
+}
+
+.item:hover .marqueeTrack,
+.item:focus-visible .marqueeTrack {
+  animation-play-state: running;
+}
+
+.marqueePart {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--spacing-lg18);
+  padding-right: var(--spacing-lg18);
+}
+
+.marqueeText {
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  font-size: 19.2px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.art {
+  display: block;
+  width: 76px;
+  height: 24px;
+  flex: 0 0 auto;
+  background-image: var(--song-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes nav-song-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1023px) {
+  .item {
+    min-height: 32px;
+    padding: var(--spacing-2xs4) var(--spacing-lg18);
+  }
+
+  .defaultContent {
+    gap: var(--spacing-2xs4);
+  }
+
+  .name,
+  .marqueeText {
+    font-size: 16px;
+    line-height: 1.24;
+  }
+
+  .art {
+    width: 64px;
+    height: 20px;
+  }
+}
