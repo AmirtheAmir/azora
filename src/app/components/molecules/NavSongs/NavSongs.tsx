@@ -1,15 +1,13 @@
 import { songs } from "../../../data/songs";
-import MenuSong from "../../atoms/MenuSong/MenuSong";
-import NavSectionTitle from "../../atoms/NavSectionTitle/NavSectionTitle";
+import MenuSong from "../../atoms/MenuSong";
+import NavSectionTitle from "../../atoms/NavSectionTitle";
+import { navSongsStyles } from "./styles";
 
 export function NavSongs() {
   return (
-    <section
-      className="flex flex-col gap-3xs2"
-      aria-label="Discography"
-    >
+    <section className={navSongsStyles.root} aria-label="Discography">
       <NavSectionTitle>[Discography]</NavSectionTitle>
-      <div className="flex flex-col gap-3xs2 pb-xs6">
+      <div className={navSongsStyles.list}>
         {songs.map((song) => (
           <MenuSong
             image={song.image}

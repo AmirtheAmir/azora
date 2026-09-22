@@ -1,6 +1,7 @@
 import ConnectDropdownItem, {
   type ConnectDropdownItemData,
-} from "../../atoms/ConnectDropdownItem/ConnectDropdownItem";
+} from "../../atoms/ConnectDropdownItem";
+import { navConnectDropdownStyles } from "./styles";
 
 const connectDropdownItems: ConnectDropdownItemData[] = [
   { icon: "email", label: "contact@email.design.au" },
@@ -11,7 +12,7 @@ const connectDropdownItems: ConnectDropdownItemData[] = [
 export function NavConnectDropdown() {
   return (
     <div
-      className="flex flex-col gap-lg18 bg-background-inverse p-xl24 text-text-inverse max-[1023px]:gap-md12 max-[1023px]:p-lg18"
+      className={navConnectDropdownStyles.root}
       id="nav-connect-dropdown"
       role="menu"
     >

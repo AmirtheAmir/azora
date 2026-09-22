@@ -1,5 +1,7 @@
+import { navDividerStyles } from "./styles";
+
 export function NavDivider() {
-  return <div className="h-0.5 shrink-0 bg-border-primary" />;
+  return <div className={navDividerStyles.root} />;
 }
 
 export default NavDivider;

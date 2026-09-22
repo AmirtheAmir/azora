@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Song } from "../../../data/songs";
 import styles from "./MenuSong.module.css";
+import { menuSongStyles } from "./styles";
 
 type MenuSongProps = Song;
 
@@ -18,8 +19,12 @@ export function MenuSong({ name, year, image }: MenuSongProps) {
   return (
     <button className={styles.item} style={style} type="button">
       <span className={styles.defaultContent}>
-        <span className={`ma_h3_700 ${styles.name}`}>{name}</span>
-        <span className={`ma_h6_700 ${styles.year}`}>{year}</span>
+        <span className={`${menuSongStyles.nameTypography} ${styles.name}`}>
+          {name}
+        </span>
+        <span className={`${menuSongStyles.yearTypography} ${styles.year}`}>
+          {year}
+        </span>
       </span>
 
       <span aria-hidden className={styles.marquee}>

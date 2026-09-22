@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { navSectionTitleStyles } from "./styles";
 
 type NavSectionTitleProps = {
   children: ReactNode;
@@ -8,7 +9,7 @@ export function NavSectionTitle({
   children,
 }: NavSectionTitleProps) {
   return (
-    <span className="ma_h5_700 px-xl24 text-text-tertiary max-[1023px]:px-lg18">
+    <span className={navSectionTitleStyles.root}>
       {children}
     </span>
   );

@@ -1,5 +1,6 @@
 import type { ComponentType, SVGProps } from "react";
 import { Instagram, Soundcloud, Spotify, X } from "../../../../../public/icons";
+import { navSocialsStyles } from "./styles";
 
 type SocialLink = {
   label: string;
@@ -16,11 +17,11 @@ const socialLinks: SocialLink[] = [
 
 export function NavSocials() {
   return (
-    <div className="flex items-center gap-lg18">
+    <div className={navSocialsStyles.root}>
       {socialLinks.map(({ href, Icon, label }) => (
         <a
           aria-label={label}
-          className="inline-flex text-text-secondary transition-colors duration-300 ease-in-out hover:text-text-primary focus-visible:text-text-primary"
+          className={navSocialsStyles.link}
           href={href}
           key={label}
         >

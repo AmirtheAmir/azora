@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { navBrisbaneTimeStyles } from "./styles";
 
 function formatBrisbaneTime() {
   return new Intl.DateTimeFormat("en-AU", {
@@ -29,8 +30,8 @@ export function NavBrisbaneTime() {
   }, []);
 
   return (
-    <div className="ma_h5_700 flex gap-md12 px-xl24 text-text-secondary max-[1023px]:gap-xs6 max-[1023px]:px-lg18">
-      <span className="text-text-primary">Brisbane (AU)</span>
+    <div className={navBrisbaneTimeStyles.container}>
+      <span className={navBrisbaneTimeStyles.location}>Brisbane (AU)</span>
       <time dateTime={brisbaneTime}>{brisbaneTime}</time>
     </div>
   );

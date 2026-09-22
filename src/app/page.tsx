@@ -1,4 +1,4 @@
-import Navigation from "./components/organisms/Navigation";
+import Navigation from "./components/organisms";
 
 export default function Home() {
   return (

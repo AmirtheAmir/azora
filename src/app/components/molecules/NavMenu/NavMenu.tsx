@@ -1,7 +1,8 @@
 import NavMenuButton, {
   type NavMenuButtonData,
-} from "../../atoms/NavMenuButton/NavMenuButton";
-import NavSectionTitle from "../../atoms/NavSectionTitle/NavSectionTitle";
+} from "../../atoms/NavMenuButton";
+import NavSectionTitle from "../../atoms/NavSectionTitle";
+import { navMenuStyles } from "./styles";
 
 const navigationMenuItems: NavMenuButtonData[] = [
   { label: "Home" },
@@ -12,9 +13,9 @@ const navigationMenuItems: NavMenuButtonData[] = [
 
 export function NavMenu() {
   return (
-    <div className="flex flex-col gap-3xs2">
+    <div className={navMenuStyles.root}>
       <NavSectionTitle>[Menu]</NavSectionTitle>
-      <div className="flex flex-col gap-3xs2">
+      <div className={navMenuStyles.list}>
         {navigationMenuItems.map((item) => (
           <NavMenuButton
             count={item.count}
