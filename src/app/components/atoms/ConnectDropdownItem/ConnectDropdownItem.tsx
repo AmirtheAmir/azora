@@ -12,7 +12,6 @@ export function ConnectDropdownItem({ icon, label }: ConnectDropdownItemProps) {
   return (
     <button
       className={connectDropdownItemStyles.button}
-      role="menuitem"
       type="button"
     >
       <MaterialIcon

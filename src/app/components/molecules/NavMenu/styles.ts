@@ -1,6 +1,4 @@
-import { navCompactStack } from "../../styles";
-
 export const navMenuStyles = {
-  root: navCompactStack,
-  list: navCompactStack,
+  root: "flex flex-col gap-2xs4",
+  list: "flex flex-col gap-xs6",
 } as const;

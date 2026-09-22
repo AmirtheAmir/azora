@@ -25,6 +25,7 @@ export function MenuSong({ name, year, image }: MenuSongProps) {
         <span className={`${menuSongStyles.yearTypography} ${styles.year}`}>
           {year}
         </span>
+        <span aria-hidden className={styles.defaultSpacer} />
       </span>
 
       <span aria-hidden className={styles.marquee}>

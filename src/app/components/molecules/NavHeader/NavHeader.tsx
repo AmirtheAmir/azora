@@ -26,8 +26,8 @@ export function NavHeader({
         >
           <MaterialIcon
             className={navHeaderStyles.mobileToggleIcon}
-            name={isSmallOpen ? "arrow_drop_down" : "arrow_drop_up"}
-            size={32}
+            name={isSmallOpen ? "unfold_less" : "unfold_more"}
+            size={14}
           />
         </button>
       </div>
@@ -38,11 +38,6 @@ export function NavHeader({
         }`}
       >
         <NavSocials />
-        <MaterialIcon
-          className={navHeaderStyles.constructionIcon}
-          name="construction"
-          size={20}
-        />
       </div>
     </div>
   );

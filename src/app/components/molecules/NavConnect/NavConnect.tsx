@@ -40,7 +40,7 @@ export function NavConnect() {
                 isOpen ? navConnectStyles.iconOpen : ""
               }`}
               name="arrow_drop_down"
-              size={20}
+              size={18}
             />
           </button>
         </div>

@@ -4,25 +4,28 @@ import ConnectDropdownItem, {
 import { navConnectDropdownStyles } from "./styles";
 
 const connectDropdownItems: ConnectDropdownItemData[] = [
-  { icon: "email", label: "contact@email.design.au" },
   { icon: "content_copy", label: "Copy Email" },
   { icon: "send", label: "Send Message" },
 ];
+
+const contactEmail = "contact@email.design.au";
 
 export function NavConnectDropdown() {
   return (
     <div
       className={navConnectDropdownStyles.root}
       id="nav-connect-dropdown"
-      role="menu"
     >
-      {connectDropdownItems.map((item) => (
-        <ConnectDropdownItem
-          icon={item.icon}
-          key={item.label}
-          label={item.label}
-        />
-      ))}
+      <div className={navConnectDropdownStyles.actions}>
+        {connectDropdownItems.map((item) => (
+          <ConnectDropdownItem
+            icon={item.icon}
+            key={item.label}
+            label={item.label}
+          />
+        ))}
+      </div>
+      <span className={navConnectDropdownStyles.subtitle}>{contactEmail}</span>
     </div>
   );
 }

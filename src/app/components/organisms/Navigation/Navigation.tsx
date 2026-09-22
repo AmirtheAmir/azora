@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import NavConnect from "../molecules/NavConnect";
-import NavHeader from "../molecules/NavHeader";
-import NavMenu from "../molecules/NavMenu";
-import NavSongs from "../molecules/NavSongs";
+import NavConnect from "../../molecules/NavConnect";
+import NavHeader from "../../molecules/NavHeader";
+import NavMenu from "../../molecules/NavMenu";
+import NavSongs from "../../molecules/NavSongs";
 import { navigationStyles } from "./styles";
 
 export function Navigation() {
@@ -19,10 +19,7 @@ export function Navigation() {
         isSmallOpen ? navigationStyles.open : navigationStyles.closed
       }`}
     >
-      <section
-        className={navigationStyles.primary}
-        aria-label="Primary"
-      >
+      <section className={navigationStyles.primary} aria-label="Primary">
         <NavHeader
           isSmallOpen={isSmallOpen}
           onSmallToggle={() => setIsSmallOpen((current) => !current)}

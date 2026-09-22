@@ -1,19 +1,19 @@
 .item {
   position: relative;
   width: 100%;
-  min-height: 36px;
+  min-height: 48px;
   overflow: hidden;
   border: 0;
   background: transparent;
   color: var(--text-primary);
   cursor: pointer;
-  padding: var(--spacing-xs6) var(--spacing-xl24);
+  padding: var(--spacing-2xs4) var(--spacing-xl24);
   text-align: left;
 }
 
 .defaultContent {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: var(--spacing-xs6);
   min-width: 0;
 }
@@ -25,7 +25,16 @@
 }
 
 .year {
-  color: var(--text-primary);
+  align-self: flex-start;
+  color: var(--text-secondary);
+}
+
+.defaultSpacer {
+  display: block;
+  width: var(--spacing-xs6);
+  height: 40px;
+  flex: 0 0 auto;
+  background: transparent;
 }
 
 .marquee {
@@ -77,8 +86,8 @@
 
 .art {
   display: block;
-  width: 76px;
-  height: 24px;
+  width: 128px;
+  height: 40px;
   flex: 0 0 auto;
   background-image: var(--song-image);
   background-position: center;
@@ -92,9 +101,8 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .item {
-    min-height: 32px;
     padding: var(--spacing-2xs4) var(--spacing-lg18);
   }
 
@@ -107,9 +115,24 @@
     font-size: 16px;
     line-height: 1.24;
   }
+}
+
+@media (max-width: 863px) {
+  .item {
+    min-height: 42px;
+  }
+
+  .year {
+    font-size: 11.1px;
+    line-height: 1.22;
+  }
+
+  .defaultSpacer {
+    height: 34px;
+  }
 
   .art {
-    width: 64px;
-    height: 20px;
+    width: 109px;
+    height: 34px;
   }
 }
