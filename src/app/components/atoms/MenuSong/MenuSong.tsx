@@ -17,15 +17,15 @@ export function MenuSong({ name, year, image }: MenuSongProps) {
   };
 
   return (
-    <button className={styles.item} style={style} type="button">
-      <span className={styles.defaultContent}>
-        <span className={`${menuSongStyles.nameTypography} ${styles.name}`}>
-          {name}
-        </span>
-        <span className={`${menuSongStyles.yearTypography} ${styles.year}`}>
-          {year}
-        </span>
-        <span aria-hidden className={styles.defaultSpacer} />
+    <button
+      className={`${menuSongStyles.button} ${styles.item}`}
+      style={style}
+      type="button"
+    >
+      <span className={menuSongStyles.defaultContent}>
+        <span className={menuSongStyles.name}>{name}</span>
+        <span className={menuSongStyles.year}>{year}</span>
+        <span aria-hidden className={menuSongStyles.defaultSpacer} />
       </span>
 
       <span aria-hidden className={styles.marquee}>
