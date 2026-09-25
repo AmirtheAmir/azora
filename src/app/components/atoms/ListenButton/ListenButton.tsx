@@ -4,7 +4,7 @@ import { listenButtonStyles } from "./styles";
 export function ListenButton() {
   return (
     <button className={listenButtonStyles.root} type="button">
-      <span>Listen On</span>
+      <span className={listenButtonStyles.label}>Listen On</span>
       <span aria-hidden className={listenButtonStyles.platforms}>
         <span className={listenButtonStyles.platform}>
           <Spotify className={listenButtonStyles.icon} focusable="false" />

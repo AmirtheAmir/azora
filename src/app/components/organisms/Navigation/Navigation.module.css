@@ -1,4 +1,6 @@
 .root {
+  position: sticky;
+  top: 0;
   box-sizing: border-box;
   display: flex;
   width: 296px;
@@ -7,6 +9,7 @@
   flex-shrink: 0;
   gap: var(--spacing-xl30);
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   border-right: 2px solid var(--border-primary);
   background: var(--background-primary);
   padding-block: var(--spacing-xl24);
@@ -61,6 +64,7 @@
 @media (max-width: 659px) {
   .root {
     position: fixed;
+    top: auto;
     right: 0;
     bottom: 0;
     left: 0;
