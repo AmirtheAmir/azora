@@ -71,10 +71,6 @@ export const listenButtonStyles = {
     text-text-inverse
   `,
   icon: `
-    h-[18px]
-    w-[18px]
-
-    max-[863px]:h-[14px]
-    max-[863px]:w-[14px]
+    h-[18px] w-[18px] max-[863px]:!h-[14px] max-[863px]:!w-[14px]
   `,
 } as const;

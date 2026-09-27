@@ -4,7 +4,7 @@ import { mainContentStyles } from "./styles";
 
 export function MainContent() {
   return (
-    <div className={mainContentStyles.root}>
+    <div className={`${mainContentStyles.root} pr-xl24`}>
       <LatestReleaseSection />
       <AboutSection />
     </div>

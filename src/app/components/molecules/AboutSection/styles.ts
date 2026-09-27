@@ -61,7 +61,6 @@ export const aboutSectionStyles = {
     max-[863px]:!leading-[1.5]
   `,
   emphasis: `
-    font-bold
     text-text-primary
   `,
 } as const;
